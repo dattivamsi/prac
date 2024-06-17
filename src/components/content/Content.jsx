@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import img1 from "../../assets/Mask_group.png";
 import img2 from "../../assets/image_6.png";
 import img3 from "../../assets/image_8.png";
@@ -6,8 +6,11 @@ import rating from "../../assets/Rating.png";
 import img4 from "../../assets/image_9.png";
 
 import { Cards } from "../utils";
+import Slider from "./Slider";
+import Slider1 from "./Slider";
 
 const Content = () => {
+  const [consultaion, setConsultaion] = useState(0);
   const stats = [
     { value: "12M+", label: "Happy Patients" },
     { value: "22K+", label: "Surgeries" },
@@ -15,6 +18,65 @@ const Content = () => {
     { value: "16+", label: "Cities" },
     { value: "1200+ Reviews", label: "", stars: true },
   ];
+
+  const data = [
+    {
+      heading:
+        "Chronic Total Occlusion Percutaneous Coronary Interventions (CTO-PCI)",
+      text1:
+        "CTO refers to the complete blockages in coronary arteries that develop over a prolonged period of time and can often lead to collaterals, or conduits in between coronary arteries without intervening capillary beds, that provide alternate routes for blood supply.",
+      text2:
+        "Subsequently, patients with CTO may develop symptoms varying in severity and character associated with myocardial ischemia, including fatigue, chest pain, dyspnea, neck or arm pain, malignant heart rhythm, heart failure, and more.",
+      text3:
+        "CTO refers to the complete blockages in coronary arteries that develop over a prolonged period of time and can often lead to collaterals, or conduits in between coronary arteries without intervening capillary beds, that provide alternate routes for blood supply.",
+      image: img2,
+    },
+    {
+      heading:
+        "Chronic Total Occlusion Percutaneous Coronary Interventions (CTO-PCI)",
+      text1:
+        "CTO refers to the complete blockages in coronary arteries that develop over a prolonged period of time and can often lead to collaterals, or conduits in between coronary arteries without intervening capillary beds, that provide alternate routes for blood supply.",
+      text2:
+        "Subsequently, patients with CTO may develop symptoms varying in severity and character associated with myocardial ischemia, including fatigue, chest pain, dyspnea, neck or arm pain, malignant heart rhythm, heart failure, and more.",
+      text3:
+        "CTO refers to the complete blockages in coronary arteries that develop over a prolonged period of time and can often lead to collaterals, or conduits in between coronary arteries without intervening capillary beds, that provide alternate routes for blood supply.",
+      image: img4,
+    },
+    {
+      heading:
+        "Chronic Total Occlusion Percutaneous Coronary Interventions (CTO-PCI)",
+      text1:
+        "CTO refers to the complete blockages in coronary arteries that develop over a prolonged period of time and can often lead to collaterals, or conduits in between coronary arteries without intervening capillary beds, that provide alternate routes for blood supply.",
+      text2:
+        "Subsequently, patients with CTO may develop symptoms varying in severity and character associated with myocardial ischemia, including fatigue, chest pain, dyspnea, neck or arm pain, malignant heart rhythm, heart failure, and more.",
+      text3:
+        "CTO refers to the complete blockages in coronary arteries that develop over a prolonged period of time and can often lead to collaterals, or conduits in between coronary arteries without intervening capillary beds, that provide alternate routes for blood supply.",
+      image: img4,
+    },
+    {
+      heading:
+        "Chronic Total Occlusion Percutaneous Coronary Interventions (CTO-PCI)",
+      text1:
+        "CTO refers to the complete blockages in coronary arteries that develop over a prolonged period of time and can often lead to collaterals, or conduits in between coronary arteries without intervening capillary beds, that provide alternate routes for blood supply.",
+      text2:
+        "Subsequently, patients with CTO may develop symptoms varying in severity and character associated with myocardial ischemia, including fatigue, chest pain, dyspnea, neck or arm pain, malignant heart rhythm, heart failure, and more.",
+      text3:
+        "CTO refers to the complete blockages in coronary arteries that develop over a prolonged period of time and can often lead to collaterals, or conduits in between coronary arteries without intervening capillary beds, that provide alternate routes for blood supply.",
+      image: img4,
+    },
+  ];
+
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
+  const handleChange = (val) => {
+    setConsultaion(val);
+  };
 
   return (
     <main>
@@ -47,7 +109,12 @@ const Content = () => {
       <section>
         <div className="stats-cards">
           {stats.map((stat, index) => (
-            <div key={index} className="stats-card">
+            <div
+              key={index}
+              className={
+                stat?.stars === true ? "stats-card w-fit-content" : "stats-card"
+              }
+            >
               <div className="stats-value">{stat.value}</div>
               <div className="stats-label">{stat.label}</div>
               {stat.stars && (
@@ -81,22 +148,7 @@ const Content = () => {
         </div>
       </section>
       <section>
-        <div className="stats-cards cards">
-          <Cards
-            image={img2}
-            name={"Dr Ramnaresh Soudri"}
-            designation={"Consultant Interventional Cardiologist"}
-            time={"10:00 AM - 4:00 PM"}
-            exp={"Exp: 10+ Yrs"}
-          />
-          <Cards
-            image={img2}
-            name={"Dr Naga Srinivaas Akondi"}
-            designation={"Senior Consultant Cardiologist"}
-            time={"10:00 AM - 4:00 PM"}
-            exp={"Exp: 25+ Yrs"}
-          />
-        </div>
+        <Slider1 />
       </section>
       <section>
         <div
@@ -160,14 +212,55 @@ const Content = () => {
             Types Of Cardiology Consultation
           </h1>
           <div className="button-container">
-            <button>CTO Surgery</button>
-            <button>CTO Surgery</button>
-            <button>CTO Surgery</button>
-            <button>CTO Surgery</button>
-            <button>CTO Surgery</button>
+            <button onClick={() => handleChange(0)}>CTO Surgery</button>
+            <button onClick={() => handleChange(1)}>CTO Surgery</button>
+            <button onClick={() => handleChange(2)}>CTO Surgery</button>
+            <button onClick={() => handleChange(3)}>CTO Surgery</button>
+            <button onClick={() => handleChange(4)}>CTO Surgery</button>
             <button>CTO Surgery</button>
           </div>
-          <div className="types_container">
+          {data?.map(
+            (ele, index) =>
+              index === consultaion && (
+                <div className="types_container" key={index}>
+                  <div className="right">
+                    <h3 className="op-5 head">
+                      {/* Chronic Total Occlusion Percutaneous Coronary
+                      Interventions (CTO-PCI) */}
+                      {ele?.heading}
+                    </h3>
+                    <p className="desc op-5">
+                      {/* CTO refers to the complete blockages in coronary arteries
+                      that develop over a prolonged period of time and can often
+                      lead to collaterals, or conduits in between coronary
+                      arteries without intervening capillary beds, that provide
+                      alternate routes for blood supply. */}
+                      {ele?.text1}
+                    </p>
+                    <p className="desc op-5">
+                      {/* Subsequently, patients with CTO may develop symptoms
+                      varying in severity and character associated with
+                      myocardial ischemia, including fatigue, chest pain,
+                      dyspnea, neck or arm pain, malignant heart rhythm, heart
+                      failure, and more. */}
+                      {ele?.text2}
+                    </p>
+                    <p className="desc op-5">
+                      {/* CTO refers to the complete blockages in coronary arteries
+                      that develop over a prolonged period of time and can often
+                      lead to collaterals, or conduits in between coronary
+                      arteries without intervening capillary beds, that provide
+                      alternate routes for blood supply. */}
+                      {ele?.text3}
+                    </p>
+                  </div>
+                  <div className="left">
+                    <img src={ele?.image} alt="" />
+                  </div>
+                </div>
+              )
+          )}
+          {/* <div className="types_container">
             <div className="right">
               <h3 className="op-5 head">
                 Chronic Total Occlusion Percutaneous Coronary Interventions
@@ -197,12 +290,12 @@ const Content = () => {
             <div className="left">
               <img src={img4} alt="" />
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
       <section>
         <div className="why_choose_us">
-        <h1 className="cardiology-head">Success Stories</h1>
+          <h1 className="cardiology-head">Success Stories</h1>
         </div>
       </section>
     </main>

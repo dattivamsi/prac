@@ -53,6 +53,9 @@ input::placeholder{
 .text-center{
   text-align: center;
 }
+.w-fit-content{
+  width: fit-content;
+}
 /* .app-container{
   padding: 0 4rem;
 } */

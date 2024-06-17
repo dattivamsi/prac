@@ -3,7 +3,7 @@
   background-image: url("../../assets/banner-medi.png");
   background-size: cover; /* Ensures the background image covers the entire container */
   background-repeat: no-repeat;
-  height: 70vh;
+  height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,10 +37,11 @@
   font-weight: 500;
 }
 .form-head {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
   text-align: center;
   line-height: 2.1rem;
+  width: fit-content;
 }
 .stats-cards {
   padding: 2rem 4rem 8rem 4rem;
@@ -78,6 +79,7 @@
   opacity: 0.6;
   padding-top: 0.2rem;
   color: var(--black--);
+  text-align: center;
 }
 
 .stats-stars {
@@ -250,13 +252,24 @@
   gap: 2rem;
 }
 .types_container .desc{
-  font-size: 1.2rem;
+  /* font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1rem; */
+  font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2rem;
+    padding-bottom: 1rem;
 }
 .types_container .right{
   width: 70%;
+}
+.slick-dots{
+  bottom: 0px;
+}
+.slick-next{
+  right: 13px;
+  top: 34%;
 }
 @media screen and (max-width: 768px) {
   .main-container {
@@ -284,9 +297,12 @@
     width: 100%;
   }
   .card-container {
-    width: 100%;
+    width: 60%;
     flex-direction: column;
     height: fit-content;
+  }
+  .slick-next{
+    top: 50%;
   }
   .cardiology-card {
     width: 100%;
@@ -299,6 +315,9 @@
   }
   .types_container{
     flex-direction: column;
+  }
+  .types_container .right .head{
+    font-size: 1.5rem;
   }
   .types_container .right{
     width: 100%;
@@ -330,9 +349,19 @@
     width: 27rem;
   }
   .card-container .right{
-    width: 50%;
+    width: 40%;
   }
   .card-image{
     width: 95%;
+  }
+  .card-image{
+    height: 12rem;
+    width: 12rem;
+  }
+}
+
+@media screen and (min-width:1024px) and (max-width:1366px){
+  .card-image{
+    height: 12rem;
   }
 }
