@@ -271,6 +271,11 @@
   right: 13px;
   top: 34%;
 }
+.slick-prev{
+  left: 13px;
+  top: 34%;
+  z-index: 2;
+}
 @media screen and (max-width: 768px) {
   .main-container {
     flex-direction: column;
@@ -364,4 +369,22 @@
   .card-image{
     height: 12rem;
   }
+}
+
+
+/* Override default styles to ensure both arrows are visible */
+/* .slick-prev, .slick-next {
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+} */
+
+.slick-prev {
+  /* left: 10px !important; */
+  /* display: block !important; */
+}
+
+.slick-next {
+  /* right: 10px !important; */
+  /* display: block !important; */
 }
