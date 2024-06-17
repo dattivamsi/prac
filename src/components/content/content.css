@@ -1,0 +1,338 @@
+.main-container {
+  padding: 0 4rem;
+  background-image: url("../../assets/banner-medi.png");
+  background-size: cover; /* Ensures the background image covers the entire container */
+  background-repeat: no-repeat;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.glass-effect {
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 auto;
+  width: 30%;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.glass-effect form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.hosp-content {
+  width: 70%;
+}
+.best-head {
+  font-size: 3rem;
+  font-weight: 900;
+  padding: 0.5rem 0;
+}
+.desc {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.form-head {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 2.1rem;
+}
+.stats-cards {
+  padding: 2rem 4rem 8rem 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  gap: 20px;
+}
+
+.stats-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 12rem;
+  height: 10rem;
+  /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.stats-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--c00539f--);
+}
+
+.stats-label {
+  font-size: 1.4rem;
+  opacity: 0.6;
+  padding-top: 0.2rem;
+  color: var(--black--);
+}
+
+.stats-stars {
+  margin-top: 10px;
+  color: #ffc107;
+  font-size: 16px;
+}
+
+.experience-heart {
+  padding: 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  margin: 4rem 0 2rem 0;
+}
+
+.experience-heart .right {
+  width: 60%;
+}
+.experience-heart .left {
+  max-width: 40%;
+}
+.experience-heart .right .desc {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  opacity: 0.6;
+}
+.experience-heart .left img {
+  height: 17rem;
+  width: 30rem;
+}
+.experts {
+  color: var(--F07C11--);
+}
+.card-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  background-color: var(--white--);
+  width: 50%;
+  height: 17rem;
+}
+.cards {
+  background-color: var(--caf0f8--);
+}
+.card-desc {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.card-image {
+  background-color: var(--c00539f--);
+  border: none;
+  border-radius: 1.4rem;
+}
+.card-head {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.cardiology-card {
+  width: 57%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.cardiology-img {
+  height: 23rem;
+  width: 35rem;
+}
+.cardiology-head {
+  font-size: 2.5rem;
+  color: var(--black--);
+  opacity: 0.5;
+  font-weight: 600;
+}
+.cardiology-card button {
+  border-radius: 2rem;
+  padding: 0.8rem 4rem;
+}
+.why_choose_us {
+  background-color: var(--caf0f8--);
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+}
+.why_choose_us h1 {
+  text-align: center;
+}
+.why_choose_us p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+}
+.box {
+  /* max-width: 30%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    background-color: var(--white--);
+    border-top-left-radius: 30px solid red; */
+  position: relative;
+  width: 30%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+  flex-direction: column;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box::before,
+.box::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  box-sizing: border-box;
+}
+
+.box::before {
+  top: 0;
+  right: 0;
+  border-top: 3px solid red;
+  border-right: 3px solid red;
+  border-top-right-radius: 10px;
+}
+
+/* Bottom-left corner */
+.box::after {
+  bottom: 0;
+  left: 0;
+  border-bottom: 3px solid red;
+  border-left: 3px solid red;
+  border-bottom-left-radius: 10px;
+}
+
+.head{
+  padding: 1rem 0;
+}
+.why_cards_container{
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+.button-container{
+  display: flex;
+  /* flex-wrap: wrap;
+  width: 100%;
+  text-align: center; */
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 4rem 0 2rem 0;
+}
+.button-container button{
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+}
+.types_container{
+  display: flex;
+  gap: 2rem;
+}
+.types_container .desc{
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  padding-bottom: 1rem;
+}
+.types_container .right{
+  width: 70%;
+}
+@media screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    height: fit-content;
+    padding: 2rem 4rem;
+  }
+  .hosp-content {
+    width: 100%;
+  }
+  .glass-effect {
+    width: 100%;
+  }
+  .stats-cards {
+    padding: 2rem 4rem;
+    flex-direction: column;
+  }
+  .stats-card {
+    width: 20rem;
+  }
+  .experience-heart {
+    flex-direction: column;
+  }
+  .experience-heart .right {
+    width: 100%;
+  }
+  .card-container {
+    width: 100%;
+    flex-direction: column;
+    height: fit-content;
+  }
+  .cardiology-card {
+    width: 100%;
+  }
+  .why_cards_container{
+    flex-direction: column;
+  }
+  .box{
+    width: 100%;
+  }
+  .types_container{
+    flex-direction: column;
+  }
+  .types_container .right{
+    width: 100%;
+  }
+  .types_container .left{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .experience-heart .left img {
+    width: 16rem;
+    height: 10rem;
+  }
+  .cardiology-img{
+    width: 25rem;
+    height: 17rem;
+  }
+  .button-container{
+    flex-direction: column;
+  }
+  .card-image{
+    width: 95%;
+  }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px){
+  .cardiology-img{
+    width: 27rem;
+  }
+  .card-container .right{
+    width: 50%;
+  }
+  .card-image{
+    width: 95%;
+  }
+}

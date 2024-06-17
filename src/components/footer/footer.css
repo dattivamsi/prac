@@ -1,0 +1,10 @@
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    background-color: var(--c00539f--);
+}
+.footer-container p{
+    color: var(--white--);
+}

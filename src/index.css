@@ -1,0 +1,78 @@
+@import url('../src/components/header/header.css');
+@import url('../src/components/footer/footer.css');
+@import url('../src/components/content/content.css');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+body{
+  font-family: Arial, sans-serif;
+}
+
+:root{
+  --c00539f--: #00539f;
+  --c757575--: #757575;
+  --F07C11--: #F07C11;
+  --white--: #fff;
+  --black--: #000;
+  --caf0f8--: #caf0f8;
+}
+ul li{
+  list-style-type: none;
+}
+button{
+  background-color: var(--c00539f--);
+  padding: 0.8rem 2rem;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 0.3rem;
+  color: var(--white--);
+  cursor: pointer;
+}
+input{
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+}
+input::placeholder{
+  color: var(--black--);
+  opacity: 0.5;
+}
+.op-3{
+  opacity: 0.3;
+}
+.op-5{
+  opacity: 0.5;
+}
+.p4-p2{
+  padding: 2rem 4rem;
+}
+.text-center{
+  text-align: center;
+}
+/* .app-container{
+  padding: 0 4rem;
+} */
+@media screen and (min-width: 769px) and (max-width: 1024px){
+  html{
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1366px){
+  html{
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1366px){
+  html{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1366px){
+  html{
+    font-size: 10px;
+  }
+}
